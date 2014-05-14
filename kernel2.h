@@ -1,5 +1,5 @@
-#ifndef KERNEL_H_
-#define KERNEL_H_
+#ifndef KERNEL2_H_
+#define KERNEL2_H_
 
 void createProcess(void (*f)(), int stackSize);
 
@@ -13,18 +13,16 @@ void exitMonitor();
 
 void wait();
 
+int timedWait(int msec);
+
 void notify();
 
 void notifyAll();
 
+void sleep(int msec);
+
 void yield();
 
-int createEvent();
+void waitInterrupt(int per);
 
-void attendre(int eventID);
-
-void declencher(int eventID);
-
-void reinitialiser(int eventID);
-
-#endif /*KERNEL_H_*/
+#endif /*KERNEL2_H_*/
